@@ -7,7 +7,6 @@ import (
 	"os"
 	"path/filepath"
 	"time"
-
 	"github.com/globalsign/mgo"
 )
 
@@ -23,6 +22,7 @@ func DBcon() *mgo.Session {
 }
 
 func isDirEmpty(name string) (bool, error) {
+
 	f, err := os.Open(name)
 	if err != nil {
 		return false, err
@@ -36,6 +36,7 @@ func isDirEmpty(name string) (bool, error) {
 	if err == io.EOF {
 		return true, nil
 	}
+
 	return false, err
 }
 
@@ -74,26 +75,6 @@ func myDirVisit(pAth string, f os.FileInfo, err error) error {
 		return nil // not a file.  ignore.
 	}
 
-	// ext := filepath.Ext(pAth)
-	// if ext == "" {
-	// 	return nil //not a pic or movie
-	// } else if ext == ".nfo" {
-	// 	return nil //not a file we are interested in
-	// } else if ext == ".txt" {
-	// 	return nil // not a file we are interested in
-	// }
-
-	// switch ext {
-	// 	case ".mp4":
-	// 		processTVShowInfo(pAth)
-	// 	case ".mkv":
-	// 		processTVShowInfo(pAth)
-	// 	case ".avi":
-	// 		processTVShowInfo(pAth)
-	// 	case ".m4v":
-	// 		processTVShowInfo(pAth)
-	// }
-
 	ext := filepath.Ext(pAth)
 	switch ext {
 	case "":
@@ -114,8 +95,17 @@ func myDirVisit(pAth string, f os.FileInfo, err error) error {
 	return nil
 }
 
-//SetUp is exported to main
-func SetUp() (ExStat int) {
+var finished bool = false
+// TVUpdate needs to be exported
+func TVUpdate() (finished bool) {
+	TVSetUp()
+	finished = true
+	fmt.Println("Update Complete")
+	return
+}
+
+//TVSetUp is exported to main
+func TVSetUp() (ExStat int) {
 	//Start the timer
 	startTime := time.Now().Unix()
 	fmt.Printf("setup function has started at: %T", startTime)
