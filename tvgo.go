@@ -122,7 +122,7 @@ func TVSetUp() (ExStat int) {
 	}
 
 	os.Setenv("TVGOBS_SETUP", "0")
-	fmt.Printf("this is noartlist :: %s", NoArtList)
+	// fmt.Printf("this is noartlist :: %s", NoArtList)
 	fmt.Println(startTime)
 	stopTime := time.Now().Unix()
 	fmt.Println(stopTime)
