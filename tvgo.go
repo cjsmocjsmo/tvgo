@@ -42,16 +42,17 @@ func isDirEmpty(name string) (bool, error) {
 
 func processTVShowInfo(pAth string) {
 	log.Println("\n\n Process_TVShows has started")
-	offset := len(pAth) - 4
-	noextPath := pAth[:offset]
-	jpgextPath := noextPath + ".jpg"
-	var tvpicPath string
-	if _, err := os.Stat(jpgextPath); err == nil {
-		tvpicPath = jpgextPath
-	} else {
-		tvpicPath = os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
-	}
+	// offset := len(pAth) - 4
+	// noextPath := pAth[:offset]
+	// jpgextPath := noextPath + ".jpg"
+	// var tvpicPath string
+	// if _, err := os.Stat(jpgextPath); err == nil {
+	// 	tvpicPath = jpgextPath
+	// } else {
+	// 	tvpicPath = os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
+	// }
 
+	tvpicPath := os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
 	// var TvI TVShowInfoS
 	TvI := getTvShowInfo(pAth, tvpicPath)
 	fmt.Printf("\n\n THIS IS TVI %s \n\n", TvI)
@@ -121,7 +122,7 @@ func TVSetUp() (ExStat int) {
 		fmt.Println(err)
 	}
 
-	os.Setenv("TVGOBS_SETUP", "0")
+	os.Setenv("MEDIACENTER_TVGO_SETUP", "0")
 	// fmt.Printf("this is noartlist :: %s", NoArtList)
 	fmt.Println(startTime)
 	stopTime := time.Now().Unix()
