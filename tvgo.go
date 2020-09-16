@@ -10,10 +10,10 @@ import (
 	"github.com/globalsign/mgo"
 )
 
-//DBcon is exported for all our db connection objects
-func DBcon() *mgo.Session {
+//TVDBcon is exported for all our db connection objects
+func TVDBcon() *mgo.Session {
 	fmt.Println("Starting Update db session")
-	s, err := mgo.Dial(os.Getenv("TVGOBS_MONGODB_ADDRESS"))
+	s, err := mgo.Dial(os.Getenv("MEDIACENTER_MONGODB_ADDRESS"))
 	if err != nil {
 		fmt.Println("this is dial err")
 		panic(err)
@@ -49,13 +49,13 @@ func processTVShowInfo(pAth string) {
 	if _, err := os.Stat(jpgextPath); err == nil {
 		tvpicPath = jpgextPath
 	} else {
-		tvpicPath = os.Getenv("TVGOBS_NO_ART_PIC_PATH")
+		tvpicPath = os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
 	}
 
 	// var TvI TVShowInfoS
 	TvI := getTvShowInfo(pAth, tvpicPath)
 	fmt.Printf("\n\n THIS IS TVI %s \n\n", TvI)
-	ses := DBcon()
+	ses := TVDBcon()
 	defer ses.Close()
 	MTc := ses.DB("tvgobs").C("tvgobs")
 	err := MTc.Insert(&TvI)
@@ -110,13 +110,13 @@ func TVSetUp() (ExStat int) {
 	startTime := time.Now().Unix()
 	fmt.Printf("setup function has started at: %T", startTime)
 	//Connect to the DB
-	sess := DBcon()
+	sess := TVDBcon()
 	err := sess.DB("tvgobs").DropDatabase()
 	if err != nil {
 		fmt.Println(err)
 	}
 
-	err = filepath.Walk(os.Getenv("TVGOBS_TVSHOWS_PATH"), myDirVisit)
+	err = filepath.Walk(os.Getenv("MEDIACENTER_TVSHOWS_PATH"), myDirVisit)
 	if err != nil {
 		fmt.Println(err)
 	}
