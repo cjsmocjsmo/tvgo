@@ -91,7 +91,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Genre = "TVShows"
 			TvSI.TVShowPicPath = tvshowpicPath
 			TvSI.TvFSPath = fspath
-			TvSI.Catagory = "The Orville"
+			TvSI.Catagory = "Orville"
 			TvSI.Season = filename[13:15]
 			TvSI.Episode = filename[16:18]
 			TvSI.Title = filename[19:boo]
@@ -154,7 +154,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Genre = "TVShows"
 			TvSI.TVShowPicPath = tvshowpicPath
 			TvSI.TvFSPath = fspath
-			TvSI.Catagory = "The Last Ship"
+			TvSI.Catagory = "Last Ship"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
 			TvSI.Title = filename[21:boo]
