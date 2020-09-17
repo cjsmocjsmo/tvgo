@@ -146,7 +146,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Series = "Enterprise"
 		case strings.Contains(apath, "The Last Ship"):
 			_, filename := path.Split(apath)
-			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
 			fspath := apath[20:]
 			boo := len(filename) - 4
 			TvSI.ID = bson.NewObjectId()
