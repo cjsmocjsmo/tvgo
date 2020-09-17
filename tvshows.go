@@ -154,7 +154,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.MediaID = tvshowsUUID()
 			TvSI.Genre = "TVShows"
 			TvSI.TVShowPicPath = tvshowpicPath
-			TvSI.TvFSPath = fspath*
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "The Last Ship"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
