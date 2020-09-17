@@ -37,54 +37,124 @@ type TVShowInfoS struct {
 }
 
 func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
-	_, filename := path.Split(apath)
-	// /root/fsData/TVShows/Enterprise/S1/filename.mp4
-	fspath := apath[20:]
-	boo := len(filename) - 4
-	TvSI.ID = bson.NewObjectId()
-	TvSI.FilePath = apath
-	TvSI.MediaID = tvshowsUUID()
-	TvSI.Genre = "TVShows"
-	TvSI.TVShowPicPath = tvshowpicPath
-	TvSI.TvFSPath = fspath
+	// _, filename := path.Split(apath)
+	// // /root/fsData/TVShows/Enterprise/S1/filename.mp4
+	// fspath := apath[20:]
+	// boo := len(filename) - 4
+	// TvSI.ID = bson.NewObjectId()
+	// TvSI.FilePath = apath
+	// TvSI.MediaID = tvshowsUUID()
+	// TvSI.Genre = "TVShows"
+	// TvSI.TVShowPicPath = tvshowpicPath
+	// TvSI.TvFSPath = fspath
 	switch {
 		case strings.Contains(apath, "TVShows/TNG"):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "TNG"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
 			TvSI.Title = filename[21:boo]
 			TvSI.Series = filename[21:boo]
 		case strings.Contains(apath, " STTV "):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "STTV"
 			TvSI.Season = filename[16:18]
 			TvSI.Episode = filename[19:21]
 			TvSI.Title = filename[21:boo]
 			TvSI.Series = "Star Trek"
 		case strings.Contains(apath, "Orville"):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "The Orville"
 			TvSI.Season = filename[13:15]
 			TvSI.Episode = filename[16:18]
 			TvSI.Title = filename[19:boo]
 			TvSI.Series = "The Orville"
 		case strings.Contains(apath, "Voyager"):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "Voyager"
 			TvSI.Season = filename[19:21]
 			TvSI.Episode = filename[22:24]
 			TvSI.Title = filename[24:boo]
 			TvSI.Series = "Voyager"
 		case strings.Contains(apath, "Discovery"):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "Discovery"
 			TvSI.Season = filename[21:23]
 			TvSI.Episode = filename[24:26]
 			TvSI.Title = filename[27:boo]
 			TvSI.Series = "Discovery"
 		case strings.Contains(apath, "ENT"):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "Enterprise"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
 			TvSI.Title = filename[20:boo]
 			TvSI.Series = "Enterprise"
 		case strings.Contains(apath, "The Last Ship"):
+			_, filename := path.Split(apath)
+			// /root/fsData/TVShows/Enterprise/S1/filename.mp4
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath*
 			TvSI.Catagory = "The Last Ship"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
