@@ -204,6 +204,21 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Episode = filename[20:22]
 			TvSI.Title = filename[23:boo]
 			TvSI.Series = "Mandalorian"
+		case strings.Contains(apath, "AlteredCarbon"):
+			_, filename := path.Split(apath)
+			fspath := apath[20:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
+			TvSI.Catagory = "AlteredCarbon"
+			TvSI.Season = filename[17:19]
+			TvSI.Episode = filename[20:22]
+			TvSI.Title = filename[23:boo]
+			TvSI.Series = "AlteredCarbon"
 	}
 	fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
 	return
