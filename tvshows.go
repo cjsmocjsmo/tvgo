@@ -217,7 +217,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "AlteredCarbon"
 			TvSI.Season = filename[16:18]
 			TvSI.Episode = filename[19:21]
-			TvSI.Title = filename[22:boo]
+			TvSI.Title = filename[21:boo]
 			TvSI.Series = "AlteredCarbon"
 	}
 	fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
