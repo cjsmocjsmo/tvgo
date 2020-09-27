@@ -204,7 +204,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Episode = filename[20:22]
 			TvSI.Title = filename[23:boo]
 			TvSI.Series = "Mandalorian"
-		case strings.Contains(apath, "AlteredCarbon"):
+		case strings.Contains(apath, "Altered Carbon"):
 			_, filename := path.Split(apath)
 			fspath := apath[20:]
 			boo := len(filename) - 4
