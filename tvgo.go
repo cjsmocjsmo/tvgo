@@ -2,12 +2,12 @@ package tvgo
 
 import (
 	"fmt"
+	"github.com/globalsign/mgo"
 	"io"
 	"log"
 	"os"
 	"path/filepath"
 	"time"
-	"github.com/globalsign/mgo"
 )
 
 //TVDBcon is exported for all our db connection objects
@@ -97,6 +97,7 @@ func myDirVisit(pAth string, f os.FileInfo, err error) error {
 }
 
 var finished bool = false
+
 // TVUpdate needs to be exported
 func TVUpdate() (finished bool) {
 	TVSetUp()
