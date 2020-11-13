@@ -215,11 +215,11 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Genre = "TVShows"
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
-		TvSI.Catagory = "Lower Decks"
-		TvSI.Season = filename[17:19]
-		TvSI.Episode = filename[20:22]
-		TvSI.Title = filename[23:boo]
-		TvSI.Series = "Lower Decks"
+		TvSI.Catagory = "LowerDecks"
+		TvSI.Season = filename[22:24]
+		TvSI.Episode = filename[26:28]
+		TvSI.Title = filename[29:boo]
+		TvSI.Series = "LowerDecks"
 
 	case strings.Contains(apath, "Altered Carbon"):
 		_, filename := path.Split(apath)
