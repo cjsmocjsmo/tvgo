@@ -248,8 +248,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "RaisedByWolves"
-		TvSI.Season = filename[16:18]
-		TvSI.Episode = filename[19:21]
+		TvSI.Season = filename[17:19]
+		TvSI.Episode = filename[20:22]
 		TvSI.Title = filename[21:boo]
 		TvSI.Series = "RaisedByWolves"
 	}
