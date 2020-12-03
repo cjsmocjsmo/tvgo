@@ -252,7 +252,40 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Episode = filename[21:23]
 		TvSI.Title = filename[23:boo]
 		TvSI.Series = "RaisedByWolves"
+
+	case strings.Contains(apath, "SpaceTime"):
+		_, filename := path.Split(apath)
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "SpaceTime"
+		TvSI.Season = filename[18:20]
+		TvSI.Episode = filename[21:23]
+		TvSI.Title = filename[23:boo]
+		TvSI.Series = "SpaceTime"
+	
+	case strings.Contains(apath, "SeanCarrol"):
+		_, filename := path.Split(apath)
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "SeanCarrol"
+		TvSI.Season = filename[18:20]
+		TvSI.Episode = filename[21:23]
+		TvSI.Title = filename[23:boo]
+		TvSI.Series = "SeanCarrol"
 	}
+
 	fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
 	return
 }
