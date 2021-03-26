@@ -253,6 +253,26 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[23:boo]
 		TvSI.Series = "RaisedByWolves"
 
+
+	case strings.Contains(apath, "For All Man Kind"):
+		_, filename := path.Split(apath)
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "ForAllManKind"
+		TvSI.Season = filename[17:19]
+		TvSI.Episode = filename[20:22]
+		TvSI.Title = filename[22:boo]
+		TvSI.Series = "ForAllManKind"
+
+
+
+
 	case strings.Contains(apath, "SpaceTime"):
 		_, filename := path.Split(apath)
 		fspath := apath[20:]
