@@ -55,7 +55,7 @@ func processTVShowInfo(pAth string) {
 	tvpicPath := os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
 	// var TvI TVShowInfoS
 	TvI := getTvShowInfo(pAth, tvpicPath)
-	fmt.Printf("\n\n THIS IS TVI %s \n\n", TvI)
+	// fmt.Printf("\n\n THIS IS TVI %s \n\n", TvI)
 	ses := TVDBcon()
 	defer ses.Close()
 	MTc := ses.DB("tvgobs").C("tvgobs")
