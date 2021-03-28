@@ -261,8 +261,11 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[22:boo]
 		TvSI.Series = "ForAllManKind"
 
-	case strings.Contains(apath, "Alien Worlds"):
+	case strings.Contains(apath, "AlienWorlds"):
 		_, filename := path.Split(apath)
+		fmt.Println(filename[19:21])
+		fmt.Println(filename[22:24])
+		fmt.Println(filename[24:boo])
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
