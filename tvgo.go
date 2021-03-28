@@ -22,40 +22,24 @@ func TVDBcon() *mgo.Session {
 }
 
 func isDirEmpty(name string) (bool, error) {
-
 	f, err := os.Open(name)
 	if err != nil {
 		return false, err
 	}
 	defer f.Close()
-
 	// read in ONLY one file
 	_, err = f.Readdir(1)
-
 	// and if the file is EOF... well, the dir is empty.
 	if err == io.EOF {
 		return true, nil
 	}
-
 	return false, err
 }
 
 func processTVShowInfo(pAth string) {
 	log.Println("\n\n Process_TVShows has started")
-	// offset := len(pAth) - 4
-	// noextPath := pAth[:offset]
-	// jpgextPath := noextPath + ".jpg"
-	// var tvpicPath string
-	// if _, err := os.Stat(jpgextPath); err == nil {
-	// 	tvpicPath = jpgextPath
-	// } else {
-	// 	tvpicPath = os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
-	// }
-
 	tvpicPath := os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
-	// var TvI TVShowInfoS
 	TvI := getTvShowInfo(pAth, tvpicPath)
-	// fmt.Printf("\n\n THIS IS TVI %s \n\n", TvI)
 	ses := TVDBcon()
 	defer ses.Close()
 	MTc := ses.DB("tvgobs").C("tvgobs")
@@ -117,14 +101,12 @@ func TVSetUp() (ExStat int) {
 	if err != nil {
 		fmt.Println(err)
 	}
-
 	err = filepath.Walk(os.Getenv("MEDIACENTER_TVSHOWS_PATH"), myDirVisit)
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	os.Setenv("MEDIACENTER_TVGO_SETUP", "0")
-	// fmt.Printf("this is noartlist :: %s", NoArtList)
 	fmt.Println(startTime)
 	stopTime := time.Now().Unix()
 	fmt.Println(stopTime)
