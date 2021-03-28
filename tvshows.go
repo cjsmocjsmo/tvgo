@@ -269,9 +269,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Episode = filename[20:22]
 		TvSI.Title = filename[22:boo]
 		TvSI.Series = "ForAllManKind"
-		fmt.Printf("\n THIS IS TVI FROM TVSHOWS %s", TvSI.Season)
-		fmt.Printf("\n THIS IS TVI FROM TVSHOWS %s", TvSI.Episode)
-		fmt.Printf("\n THIS IS TVI FROM TVSHOWS %s", TvSI.Title)
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[17:19])
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[20:22])
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[22:boo])
 
 
 	case strings.Contains(apath, "SpaceTime"):
@@ -312,6 +312,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Series = "SeanCarrol"
 	}
 
-	// fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
+	fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
 	return
 }
