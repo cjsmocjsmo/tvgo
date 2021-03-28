@@ -256,12 +256,13 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "For All Man Kind"):
 		_, filename := path.Split(apath)
+		fspath := apath[20:]
+		boo := len(filename) - 4
 		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", apath[20:])
 		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[17:19])
 		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[20:22])
 		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[22:boo])
-		fspath := apath[20:]
-		boo := len(filename) - 4
+		
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
 		TvSI.MediaID = tvshowsUUID()
