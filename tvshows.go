@@ -256,6 +256,10 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "For All Man Kind"):
 		_, filename := path.Split(apath)
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", apath[20:])
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[17:19])
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[20:22])
+		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[22:boo])
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
@@ -269,9 +273,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Episode = filename[20:22]
 		TvSI.Title = filename[22:boo]
 		TvSI.Series = "ForAllManKind"
-		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[17:19])
-		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[20:22])
-		fmt.Printf("\n THIS IS fname FROM TVSHOWS %s", filename[22:boo])
+		
 
 
 	case strings.Contains(apath, "SpaceTime"):
