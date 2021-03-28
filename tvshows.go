@@ -254,7 +254,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Series = "RaisedByWolves"
 
 
-	case strings.Contains(apath, "For All Man Kind"):
+	case strings.Contains(apath, "For All Mankind"):
 		_, filename := path.Split(apath)
 		fspath := apath[20:]
 		boo := len(filename) - 4
