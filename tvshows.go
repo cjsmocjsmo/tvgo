@@ -265,9 +265,10 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		_, filename := path.Split(apath)
 		fmt.Println(filename[19:21])
 		fmt.Println(filename[22:24])
-		fmt.Println(filename[24:boo])
+		
 		fspath := apath[20:]
 		boo := len(filename) - 4
+		fmt.Println(filename[24:boo])
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
 		TvSI.MediaID = tvshowsUUID()
