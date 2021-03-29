@@ -261,14 +261,11 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[22:boo]
 		TvSI.Series = "ForAllManKind"
 
-	case strings.Contains(apath, "AlienWorlds"):
+	case strings.Contains(apath, "Alien Worlds"):
 		_, filename := path.Split(apath)
-		fmt.Println(filename[19:21])
-		fmt.Println(filename[22:24])
-		
+		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
 		fspath := apath[20:]
 		boo := len(filename) - 4
-		fmt.Println(filename[24:boo])
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
 		TvSI.MediaID = tvshowsUUID()
@@ -276,9 +273,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "AlienWorlds"
-		TvSI.Season = filename[19:21]
-		TvSI.Episode = filename[22:24]
-		TvSI.Title = filename[24:boo]
+		TvSI.Season = filename[13:15]
+		TvSI.Episode = filename[17:19]
+		TvSI.Title = filename[20:boo]
 		TvSI.Series = "AlienWorlds"
 
 	case strings.Contains(apath, "SpaceTime"):
