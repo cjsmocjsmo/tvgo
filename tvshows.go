@@ -292,8 +292,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "WandaVision"
 		TvSI.Season = filename[13:15]
-		TvSI.Episode = filename[17:19]
-		TvSI.Title = filename[20:boo]
+		TvSI.Episode = filename[16:18]
+		TvSI.Title = filename[19:boo]
 		TvSI.Series = "WandaVision"
 
 	case strings.Contains(apath, "SpaceTime"):
