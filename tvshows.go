@@ -296,6 +296,24 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[19:boo]
 		TvSI.Series = "WandaVision"
 
+	case strings.Contains(apath, "FalconWinterSoldier"):
+		_, filename := path.Split(apath)
+		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
+		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "FalconWinterSoldier"
+		TvSI.Season = filename[34:36]
+		TvSI.Episode = filename[37:39]
+		TvSI.Title = filename[40:boo]
+		TvSI.Series = "FalconWinterSoldier"
+
 	case strings.Contains(apath, "SpaceTime"):
 		_, filename := path.Split(apath)
 		fspath := apath[20:]
