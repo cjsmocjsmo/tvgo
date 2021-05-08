@@ -263,7 +263,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Alien Worlds"):
 		_, filename := path.Split(apath)
-		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
@@ -278,10 +277,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[20:boo]
 		TvSI.Series = "AlienWorlds"
 
-
 	case strings.Contains(apath, "WandaVision"):
 		_, filename := path.Split(apath)
-		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
@@ -298,8 +295,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "FalconWinterSoldier"):
 		_, filename := path.Split(apath)
-		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
-		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
@@ -316,8 +311,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Invincible"):
 		_, filename := path.Split(apath)
-		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
-		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
@@ -335,8 +328,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "TheBadBatch"):
 		_, filename := path.Split(apath)
-		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
-		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
 		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
@@ -384,7 +375,5 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[:boo]
 		TvSI.Series = "SeanCarrol"
 	}
-
-	// fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
 	return
 }
