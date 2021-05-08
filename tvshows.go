@@ -331,6 +331,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Episode = filename[15:17]
 		TvSI.Title = filename[18:boo]
 		TvSI.Series = "Invincible"
+		fmt.Printf("\n THIS IS TVI FROM invincible \n %s \n", TvSI)
 
 	case strings.Contains(apath, "The Bad Batch"):
 		_, filename := path.Split(apath)
@@ -347,8 +348,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Catagory = "TheBadBatch"
 		TvSI.Season = filename[14:16]
 		TvSI.Episode = filename[18:20]
-		TvSI.Title = filename[41:boo]
+		TvSI.Title = filename[20:boo]
 		TvSI.Series = "TheBadBatch"
+		fmt.Printf("\n THIS IS TVI FRO the bad batch \n %s \n", TvSI)
 
 	case strings.Contains(apath, "SpaceTime"):
 		_, filename := path.Split(apath)
@@ -383,6 +385,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Series = "SeanCarrol"
 	}
 
-	fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
+	// fmt.Printf("\n THIS IS TVI FROM TVSHOWS \n %s \n", TvSI)
 	return
 }
