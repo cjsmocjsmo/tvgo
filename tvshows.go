@@ -327,9 +327,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "Invincible"
-		TvSI.Season = filename[22:24]
-		TvSI.Episode = filename[25:27]
-		TvSI.Title = filename[28:boo]
+		TvSI.Season = filename[12:14]
+		TvSI.Episode = filename[15:17]
+		TvSI.Title = filename[18:boo]
 		TvSI.Series = "Invincible"
 		fmt.Printf("\n THIS IS TVI FROM invincible \n %s \n", TvSI)
 
@@ -346,9 +346,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "TheBadBatch"
-		TvSI.Season = filename[14:16]
-		TvSI.Episode = filename[18:20]
-		TvSI.Title = filename[20:boo]
+		TvSI.Season = filename[24:26]
+		TvSI.Episode = filename[28:30]
+		TvSI.Title = filename[30:boo]
 		TvSI.Series = "TheBadBatch"
 		fmt.Printf("\n THIS IS TVI FRO the bad batch \n %s \n", TvSI)
 
