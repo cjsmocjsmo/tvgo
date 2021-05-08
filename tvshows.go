@@ -333,7 +333,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Series = "Invincible"
 		fmt.Printf("\n THIS IS TVI FROM invincible \n %s \n", TvSI)
 
-	case strings.Contains(apath, "The Bad Batch"):
+	case strings.Contains(apath, "TheBadBatch"):
 		_, filename := path.Split(apath)
 		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
 		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
@@ -346,9 +346,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "TheBadBatch"
-		TvSI.Season = filename[24:26]
-		TvSI.Episode = filename[28:30]
-		TvSI.Title = filename[30:boo]
+		TvSI.Season = filename[14:16]
+		TvSI.Episode = filename[18:20]
+		TvSI.Title = filename[20:boo]
 		TvSI.Series = "TheBadBatch"
 		fmt.Printf("\n THIS IS TVI FRO the bad batch \n %s \n", TvSI)
 
