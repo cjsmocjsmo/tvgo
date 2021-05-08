@@ -314,6 +314,42 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[40:boo]
 		TvSI.Series = "FalconWinterSoldier"
 
+	case strings.Contains(apath, "Invincible"):
+		_, filename := path.Split(apath)
+		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
+		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "Invincible"
+		TvSI.Season = filename[11:13]
+		TvSI.Episode = filename[15:17]
+		TvSI.Title = filename[18:boo]
+		TvSI.Series = "Invincible"
+
+	case strings.Contains(apath, "The Bad Batch"):
+		_, filename := path.Split(apath)
+		// "/root/fsData/TVShows/   AlienWorlds/  Alien Worlds S01E01 Atlas.mp4"
+		// "/root/fsData/TVShows/   FalconWinterSoldier/  The Falcon And The Winter Soldier S01E01 Atlas.mp4"
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "TheBadBatch"
+		TvSI.Season = filename[14:16]
+		TvSI.Episode = filename[18:20]
+		TvSI.Title = filename[41:boo]
+		TvSI.Series = "TheBadBatch"
+
 	case strings.Contains(apath, "SpaceTime"):
 		_, filename := path.Split(apath)
 		fspath := apath[20:]
