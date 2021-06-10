@@ -309,7 +309,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[40:boo]
 		TvSI.Series = "FalconWinterSoldier"
 
-	case strings.Contains(apath, "Invincible"):
+	case strings.Contains(apath, "Loki"):
 		_, filename := path.Split(apath)
 		fspath := apath[20:]
 		boo := len(filename) - 4
@@ -319,12 +319,29 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Genre = "TVShows"
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
-		TvSI.Catagory = "Invincible"
-		TvSI.Season = filename[12:14]
-		TvSI.Episode = filename[15:17]
-		TvSI.Title = filename[18:boo]
-		TvSI.Series = "Invincible"
-		fmt.Printf("\n THIS IS TVI FROM invincible \n %s \n", TvSI)
+		TvSI.Catagory = "Loki"
+		TvSI.Season = filename[6:8]
+		TvSI.Episode = filename[8:10]
+		TvSI.Title = filename[11:boo]
+		TvSI.Series = "Loki"
+		fmt.Printf("\n THIS IS TVI FROM Loki \n %s \n", TvSI)
+		
+		// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	case strings.Contains(apath, "TheBadBatch"):
 		_, filename := path.Split(apath)
