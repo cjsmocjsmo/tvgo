@@ -325,8 +325,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[11:boo]
 		TvSI.Series = "Loki"
 		fmt.Printf("\n THIS IS TVI FROM Loki \n %s \n", TvSI)
-		fmt.Println(TvSI['Season'])
-		fmt.Println(TvSI['Episode'])
+		fmt.Println(TvSI.Season)
+		fmt.Println(TvSI.Episode)
 		
 		// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
 
