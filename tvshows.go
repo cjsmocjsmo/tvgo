@@ -320,7 +320,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "Loki"
-		TvSI.Season = filename[7:9]
+		TvSI.Season = filename[6:8]
 		TvSI.Episode = filename[9:11]
 		TvSI.Title = filename[11:boo]
 		TvSI.Series = "Loki"
@@ -330,7 +330,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		
 		// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
 
-
+		// 710203042933435476 TVShows 1E 01  Glorious Purpose Loki 
 
 
 
