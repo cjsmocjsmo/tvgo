@@ -344,9 +344,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "MastersOfTheUniverse"
-		TvSI.Season = filename[35:37]
-		TvSI.Episode = filename[38:40]
-		TvSI.Title = filename[40:boo]
+		TvSI.Season = filename[36:38]
+		TvSI.Episode = filename[39:41]
+		TvSI.Title = filename[41:boo]
 		TvSI.Series = "MastersOfTheUniverse"
 		fmt.Printf("\n THIS IS TVI FROM MastersOfTheUniverse \n %s \n", TvSI)
 		fmt.Println(TvSI.Season)
