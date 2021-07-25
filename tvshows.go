@@ -333,7 +333,24 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		// 710203042933435476 TVShows 1E 01  Glorious Purpose Loki 
 
 
-
+	case strings.Contains(apath, "MastersOfTheUniverse"):
+		_, filename := path.Split(apath)
+		fspath := apath[20:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "MastersOfTheUniverse"
+		TvSI.Season = filename[31:33]
+		TvSI.Episode = filename[34:36]
+		TvSI.Title = filename[36:boo]
+		TvSI.Series = "MastersOfTheUniverse"
+		fmt.Printf("\n THIS IS TVI FROM MastersOfTheUniverse \n %s \n", TvSI)
+		fmt.Println(TvSI.Season)
+		fmt.Println(TvSI.Episode)
 
 
 
