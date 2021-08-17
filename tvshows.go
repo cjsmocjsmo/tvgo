@@ -39,7 +39,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	switch {
 	case strings.Contains(apath, "TVShows/TNG"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -55,7 +55,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, " STTV "):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -71,7 +71,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "Orville"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -87,7 +87,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "Voyager"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -103,7 +103,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "Discovery"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -119,7 +119,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "ENT"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -135,7 +135,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "The Last Ship"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -151,7 +151,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "Lost In Space"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -167,7 +167,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "Picard"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -183,7 +183,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "Mandalorian"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -199,7 +199,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Lower Decks"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -215,7 +215,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Altered Carbon"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -231,7 +231,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Raised By Wolves"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -247,7 +247,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "For All Mankind"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -263,7 +263,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Alien Worlds"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -279,7 +279,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "WandaVision"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -295,7 +295,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "FalconWinterSoldier"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -311,7 +311,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "Loki"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -335,7 +335,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "MastersOfTheUniverse"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -364,7 +364,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "TheBadBatch"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -381,7 +381,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 
 	case strings.Contains(apath, "SpaceTime"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
@@ -397,7 +397,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 	
 	case strings.Contains(apath, "SeanCarrol"):
 		_, filename := path.Split(apath)
-		fspath := apath[21:]
+		fspath := apath[20:]
 		boo := len(filename) - 4
 		TvSI.ID = bson.NewObjectId()
 		TvSI.FilePath = apath
