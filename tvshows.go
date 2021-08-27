@@ -327,11 +327,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		fmt.Printf("\n THIS IS TVI FROM Loki \n %s \n", TvSI)
 		fmt.Println(TvSI.Season)
 		fmt.Println(TvSI.Episode)
-		
-		// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
-
-		// 710203042933435476 TVShows 1E 01  Glorious Purpose Loki 
-
 
 	case strings.Contains(apath, "MastersOfTheUniverse"):
 		_, filename := path.Split(apath)
@@ -352,16 +347,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		fmt.Println(TvSI.Season)
 		fmt.Println(TvSI.Episode)
 
-
-
-
-
-
-
-
-
-
-
 	case strings.Contains(apath, "TheBadBatch"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
@@ -379,9 +364,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Series = "TheBadBatch"
 		fmt.Printf("\n THIS IS TVI FRO the bad batch \n %s \n", TvSI)
 
-
 		// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
-		//       6         
 
 	case strings.Contains(apath, "WhatIf"):
 		_, filename := path.Split(apath)
@@ -394,8 +377,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "WhatIf"
-		TvSI.Season = filename[8:10]
-		TvSI.Episode = filename[11:13]
+		TvSI.Season = filename[9:11]
+		TvSI.Episode = filename[12:14]
 		TvSI.Title = filename[14:boo]
 		TvSI.Series = "WhatIf"
 	
