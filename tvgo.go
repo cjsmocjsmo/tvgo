@@ -36,7 +36,7 @@ func isDirEmpty(name string) (bool, error) {
 	return false, err
 }
 
-func processTVShowInfo(pAth string) {
+func ProcessTVShowInfo(pAth string) {
 	log.Println("\n\n Process_TVShows has started")
 	tvpicPath := os.Getenv("MEDIACENTER_NO_ART_PIC_PATH")
 	TvI := getTvShowInfo(pAth, tvpicPath)
@@ -69,13 +69,13 @@ func myDirVisit(pAth string, f os.FileInfo, err error) error {
 	case ".txt":
 		return nil
 	case ".mp4":
-		processTVShowInfo(pAth)
+		ProcessTVShowInfo(pAth)
 	case ".mkv":
-		processTVShowInfo(pAth)
+		ProcessTVShowInfo(pAth)
 	case ".avi":
-		processTVShowInfo(pAth)
+		ProcessTVShowInfo(pAth)
 	case ".m4v":
-		processTVShowInfo(pAth)
+		ProcessTVShowInfo(pAth)
 	}
 	return nil
 }
@@ -84,7 +84,7 @@ var finished bool = false
 
 // TVUpdate needs to be exported
 func TVUpdate() (finished bool) {
-	TVSetUp()
+	TvShowsUpdate()
 	finished = true
 	fmt.Println("Update Complete")
 	return
@@ -116,3 +116,6 @@ func TVSetUp() (ExStat int) {
 	ExStat = 0
 	return
 }
+
+
+
