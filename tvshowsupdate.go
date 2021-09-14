@@ -2,12 +2,9 @@ package tvgo
 
 import (
 	"fmt"
-	// "github.com/globalsign/mgo"
-	// "io"
 	"log"
 	"os"
 	"path/filepath"
-	// "time"
 	"github.com/globalsign/mgo/bson"
 )
 
