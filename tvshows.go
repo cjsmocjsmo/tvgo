@@ -357,6 +357,23 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Episode = filename[12:14]
 			TvSI.Title = filename[14:boo]
 			TvSI.Series = "WhatIf"
+
+			// /media/pi/PiTB/TVShows/YTheLastMan/s1/Y The Last Man S01E01 Glorious Purpose.mp4
+		case strings.Contains(apath, "YTheLastMan"):
+			_, filename := path.Split(apath)
+			fspath := apath[21:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
+			TvSI.Catagory = "YTheLastMan"
+			TvSI.Season = filename[15:17]
+			TvSI.Episode = filename[18:20]
+			TvSI.Title = filename[20:boo]
+			TvSI.Series = "YTheLastMan"
 	}
 	return
 }
