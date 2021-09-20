@@ -358,7 +358,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Title = filename[14:boo]
 			TvSI.Series = "WhatIf"
 
-			// /media/pi/PiTB/TVShows/YTheLastMan/s1/Y The Last Man S01E01 Glorious Purpose.mp4
+			// /media/pi/PiTB/media/ TVShows/YTheLastMan/s1/ Y The Last Man S01E01 Glorious Purpose.mp4
 		case strings.Contains(apath, "YTheLastMan"):
 			_, filename := path.Split(apath)
 			fspath := apath[21:]
