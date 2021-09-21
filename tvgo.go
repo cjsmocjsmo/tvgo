@@ -91,7 +91,7 @@ func TVUpdate() (finished bool) {
 }
 
 func setupLogging() {
-	logfile := os.Getenv("MEDIACENTER_LOG_BASE_PATH") + "moviegobsTVsetup.log"
+	logfile := os.Getenv("MEDIACENTER_LOG_BASE_PATH") + "/moviegobsTV.log"
 	// If the file doesn't exist, create it or append to the file
 	file, err := os.OpenFile(logfile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {
