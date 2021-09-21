@@ -90,8 +90,21 @@ func TVUpdate() (finished bool) {
 	return
 }
 
+func setupLogging() {
+	logfile := os.Getenv("MEDIACENTER_LOG_BASE_PATH") + "moviegobsTVsetup.log"
+	// If the file doesn't exist, create it or append to the file
+	file, err := os.OpenFile(logfile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.SetOutput(file)
+	log.Println("Logging started \n")
+}
+
+
 //TVSetUp is exported to main
 func TVSetUp() (ExStat int) {
+	setupLogging()
 	//Start the timer
 	startTime := time.Now().Unix()
 	fmt.Printf("setup function has started at: %T", startTime)
