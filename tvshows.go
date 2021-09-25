@@ -393,7 +393,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Title = filename[17:boo]
 			TvSI.Series = "Foundation"
 
-		// /media/pi/PiTB/media/ TVShows/Visions/s1/Visions S01E01 Glorious Purpose.mp4
+		// /media/pi/PiTB/media/ TVShows/Visions/s1/Star Wars Visions S01E01 Glorious Purpose.mp4
 
 		case strings.Contains(apath, "Visions"):
 			_, filename := path.Split(apath)
@@ -406,9 +406,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.TVShowPicPath = tvshowpicPath
 			TvSI.TvFSPath = fspath
 			TvSI.Catagory = "Visions"
-			TvSI.Season = filename[9:11]
-			TvSI.Episode = filename[12:14]
-			TvSI.Title = filename[14:boo]
+			TvSI.Season = filename[19:21]
+			TvSI.Episode = filename[22:24]
+			TvSI.Title = filename[24:boo]
 			TvSI.Series = "Visions"
 
 		
