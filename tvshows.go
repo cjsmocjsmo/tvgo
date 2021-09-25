@@ -374,6 +374,44 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Episode = filename[19:21]
 			TvSI.Title = filename[21:boo]
 			TvSI.Series = "YTheLastMan"
+
+		// /media/pi/PiTB/media/ TVShows/Foundation/s1/Foundation S01E01 Glorious Purpose.mp4
+
+		case strings.Contains(apath, "Foundation"):
+			_, filename := path.Split(apath)
+			fspath := apath[21:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
+			TvSI.Catagory = "Foundation"
+			TvSI.Season = filename[12:14]
+			TvSI.Episode = filename[15:17]
+			TvSI.Title = filename[17:boo]
+			TvSI.Series = "Foundation"
+
+		// /media/pi/PiTB/media/ TVShows/Visions/s1/Visions S01E01 Glorious Purpose.mp4
+
+		case strings.Contains(apath, "Visions"):
+			_, filename := path.Split(apath)
+			fspath := apath[21:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
+			TvSI.Catagory = "Visions"
+			TvSI.Season = filename[9:11]
+			TvSI.Episode = filename[12:14]
+			TvSI.Title = filename[14:boo]
+			TvSI.Series = "Visions"
+
+		
 	}
 	return
 }
