@@ -185,8 +185,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Mandalorian"
 			TvSI.Season = filename[17:19]
 			TvSI.Episode = filename[20:22]
-			// TvSI.Title = filename[23:boo]
-			TvSI.Title = filename[20:boo]
+			TvSI.Title = filename[23:boo]
 			TvSI.Series = "Mandalorian"
 
 		case strings.Contains(apath, "Lower Decks"):
