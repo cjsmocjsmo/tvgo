@@ -49,8 +49,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "TNG"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
-			// TvSI.Title = filename[21:boo]
-			TvSI.Title = filename[18:boo]
+			TvSI.Title = filename[21:boo]
 			TvSI.Series = filename[21:boo]
 		
 		case strings.Contains(apath, " STTV "):
@@ -66,8 +65,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "STTV"
 			TvSI.Season = filename[16:18]
 			TvSI.Episode = filename[19:21]
-			// TvSI.Title = filename[21:boo]
-			TvSI.Title = filename[19:boo]
+			TvSI.Title = filename[21:boo]
 			TvSI.Series = "Star Trek"
 		
 		case strings.Contains(apath, "Orville"):
@@ -83,8 +81,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Orville"
 			TvSI.Season = filename[13:15]
 			TvSI.Episode = filename[16:18]
-			// TvSI.Title = filename[19:boo]
-			TvSI.Title = filename[16:boo]
+			TvSI.Title = filename[19:boo]
 			TvSI.Series = "The Orville"
 		
 		case strings.Contains(apath, "Voyager"):
@@ -100,8 +97,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Voyager"
 			TvSI.Season = filename[19:21]
 			TvSI.Episode = filename[22:24]
-			// TvSI.Title = filename[24:boo]
-			TvSI.Title = filename[22:boo]
+			TvSI.Title = filename[24:boo]
 			TvSI.Series = "Voyager"
 		
 		case strings.Contains(apath, "Discovery"):
@@ -117,8 +113,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Discovery"
 			TvSI.Season = filename[21:23]
 			TvSI.Episode = filename[24:26]
-			// TvSI.Title = filename[27:boo]
-			TvSI.Title = filename[24:boo]
+			TvSI.Title = filename[27:boo]
 			TvSI.Series = "Discovery"
 		
 		case strings.Contains(apath, "ENT"):
@@ -134,8 +129,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Enterprise"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
-			// TvSI.Title = filename[20:boo]
-			TvSI.Title = filename[18:boo]
+			TvSI.Title = filename[20:boo]
 			TvSI.Series = "Enterprise"
 		
 		case strings.Contains(apath, "Lost In Space"):
@@ -151,8 +145,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Lost In Space"
 			TvSI.Season = filename[15:17]
 			TvSI.Episode = filename[18:20]
-			// TvSI.Title = filename[21:boo]
-			TvSI.Title = filename[18:boo]
+			TvSI.Title = filename[21:boo]
 			TvSI.Series = "Lost In Space"
 		
 		case strings.Contains(apath, "Picard"):
@@ -168,8 +161,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Picard"
 			TvSI.Season = filename[18:20]
 			TvSI.Episode = filename[21:23]
-			// TvSI.Title = filename[24:boo]
-			TvSI.Title = filename[21:boo]
+			TvSI.Title = filename[24:boo]
 			TvSI.Series = "Picard"
 		
 		case strings.Contains(apath, "Mandalorian"):
@@ -201,8 +193,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "LowerDecks"
 			TvSI.Season = filename[23:25]
 			TvSI.Episode = filename[26:28]
-			// TvSI.Title = filename[29:boo]
-			TvSI.Title = filename[26:boo]
+			TvSI.Title = filename[29:boo]
 			TvSI.Series = "LowerDecks"
 
 		case strings.Contains(apath, "Altered Carbon"):
@@ -218,8 +209,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "AlteredCarbon"
 			TvSI.Season = filename[16:18]
 			TvSI.Episode = filename[19:21]
-			// TvSI.Title = filename[21:boo]
-			TvSI.Title = filename[19:boo]
+			TvSI.Title = filename[21:boo]
 			TvSI.Series = "AlteredCarbon"
 
 		case strings.Contains(apath, "Raised By Wolves"):
@@ -235,8 +225,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "RaisedByWolves"
 			TvSI.Season = filename[18:20]
 			TvSI.Episode = filename[21:23]
-			// TvSI.Title = filename[23:boo]
-			TvSI.Title = filename[21:boo]
+			TvSI.Title = filename[23:boo]
 			TvSI.Series = "RaisedByWolves"
 
 		case strings.Contains(apath, "For All Mankind"):
@@ -252,8 +241,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "ForAllManKind"
 			TvSI.Season = filename[17:19]
 			TvSI.Episode = filename[20:22]
-			// TvSI.Title = filename[22:boo]
-			TvSI.Title = filename[20:boo]
+			TvSI.Title = filename[22:boo]
 			TvSI.Series = "ForAllManKind"
 
 		case strings.Contains(apath, "Alien Worlds"):
@@ -269,8 +257,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "AlienWorlds"
 			TvSI.Season = filename[14:16]
 			TvSI.Episode = filename[17:19]
-			// TvSI.Title = filename[20:boo]
-			TvSI.Title = filename[17:boo]
+			TvSI.Title = filename[20:boo]
 			TvSI.Series = "AlienWorlds"
 
 		case strings.Contains(apath, "WandaVision"):
@@ -286,8 +273,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "WandaVision"
 			TvSI.Season = filename[13:15]
 			TvSI.Episode = filename[16:18]
-			// TvSI.Title = filename[19:boo]
-			TvSI.Title = filename[16:boo]
+			TvSI.Title = filename[19:boo]
 			TvSI.Series = "WandaVision"
 
 		case strings.Contains(apath, "FalconWinterSoldier"):
@@ -303,8 +289,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "FalconWinterSoldier"
 			TvSI.Season = filename[35:37]
 			TvSI.Episode = filename[38:40]
-			// TvSI.Title = filename[40:boo]
-			TvSI.Title = filename[38:boo]
+			TvSI.Title = filename[40:boo]
 			TvSI.Series = "FalconWinterSoldier"
 
 		case strings.Contains(apath, "Loki"):
@@ -320,8 +305,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Loki"
 			TvSI.Season = filename[6:8]
 			TvSI.Episode = filename[9:11]
-			// TvSI.Title = filename[11:boo]
-			TvSI.Title = filename[9:boo]
+			TvSI.Title = filename[11:boo]
 			TvSI.Series = "Loki"
 
 		case strings.Contains(apath, "MastersOfTheUniverse"):
@@ -337,8 +321,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "MastersOfTheUniverse"
 			TvSI.Season = filename[36:38]
 			TvSI.Episode = filename[39:41]
-			// TvSI.Title = filename[41:boo]
-			TvSI.Title = filename[39:boo]
+			TvSI.Title = filename[41:boo]
 			TvSI.Series = "MastersOfTheUniverse"
 
 		case strings.Contains(apath, "TheBadBatch"):
@@ -354,8 +337,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "TheBadBatch"
 			TvSI.Season = filename[25:27]
 			TvSI.Episode = filename[28:30]
-			// TvSI.Title = filename[30:boo]
-			TvSI.Title = filename[28:boo]
+			TvSI.Title = filename[30:boo]
 			TvSI.Series = "TheBadBatch"
 
 			// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
@@ -373,8 +355,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "WhatIf"
 			TvSI.Season = filename[9:11]
 			TvSI.Episode = filename[12:14]
-			// TvSI.Title = filename[14:boo]
-			TvSI.Title = filename[12:boo]
+			TvSI.Title = filename[14:boo]
 			TvSI.Series = "WhatIf"
 
 			// /media/pi/PiTB/media/ TVShows/YTheLastMan/s1/ Y The Last Man S01E01 Glorious Purpose.mp4
@@ -391,8 +372,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "YTheLastMan"
 			TvSI.Season = filename[16:18]
 			TvSI.Episode = filename[19:21]
-			// TvSI.Title = filename[21:boo]
-			TvSI.Title = filename[19:boo]
+			TvSI.Title = filename[21:boo]
 			TvSI.Series = "YTheLastMan"
 
 		// /media/pi/PiTB/media/ TVShows/Foundation/s1/Foundation S01E01 Glorious Purpose.mp4
@@ -410,8 +390,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Foundation"
 			TvSI.Season = filename[12:14]
 			TvSI.Episode = filename[15:17]
-			// TvSI.Title = filename[17:boo]
-			TvSI.Title = filename[15:boo]
+			TvSI.Title = filename[17:boo]
 			TvSI.Series = "Foundation"
 
 		// /media/pi/PiTB/media/ TVShows/Visions/s1/Star Wars Visions S01E01 Glorious Purpose.mp4
@@ -429,8 +408,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Catagory = "Visions"
 			TvSI.Season = filename[19:21]
 			TvSI.Episode = filename[22:24]
-			// TvSI.Title = filename[24:boo]
-			TvSI.Title = filename[22:boo]
+			TvSI.Title = filename[24:boo]
 			TvSI.Series = "Visions"
 
 		
