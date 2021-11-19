@@ -393,7 +393,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Title = filename[17:boo]
 			TvSI.Series = "Foundation"
 
-		// /media/pi/PiTB/media/ TVShows/Visions/s1/Star Trek Prodigy S01E01 Glorious Purpose.mp4
+		
 
 		case strings.Contains(apath, "Visions"):
 			_, filename := path.Split(apath)
@@ -426,6 +426,24 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Episode = filename[22:24]
 			TvSI.Title = filename[24:boo]
 			TvSI.Series = "Prodigy"
+
+// /media/pi/PiTB/media/ TVShows/WheelOfTime/s1/The Wheel Of Time S01E01 Glorious Purpose.mp4
+
+		case strings.Contains(apath, "WheelOfTime"):
+			_, filename := path.Split(apath)
+			fspath := apath[21:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
+			TvSI.Catagory = "WheelOfTime"
+			TvSI.Season = filename[19:21]
+			TvSI.Episode = filename[22:24]
+			TvSI.Title = filename[24:boo]
+			TvSI.Series = "WheelOfTime"
 	}
 	return
 }
