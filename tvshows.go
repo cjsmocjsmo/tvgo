@@ -1,6 +1,8 @@
 package tvgo
 
 import (
+	"os"
+	"log"
 	"math/rand"
 	"path"
 	"strconv"
@@ -34,7 +36,20 @@ type TVShowInfoS struct {
 	TvFSPath      string        `bson:"tvfspath"`
 }
 
+func startLogging() string {
+	logtxtfile := os.Getenv("MEDIACENTER_LOG_BASE_PATH") + "/tvgo_setup.log"
+	// If the file doesn't exist, create it or append to the file
+	file, err := os.OpenFile(logtxtfile, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.SetOutput(file)
+	log.Println("tvgo_setup logging started")
+	return "tvgo_setup logging started"
+}
+
 func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
+	startLogging()
 	switch {
 		case strings.Contains(apath, "TVShows/TNG"):
 			_, filename := path.Split(apath)
@@ -462,6 +477,11 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Episode = filename[17:19]
 			TvSI.Title = filename[19:boo]
 			TvSI.Series = "CowboyBebop"
+			log.Println("Starting CowboyBebop")
+			log.Println(filename[14:16])
+			log.Println(filename[17:19])
+			log.Println(filename[19:boo])
+
 	}
 	return
 }
