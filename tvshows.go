@@ -44,7 +44,7 @@ func startLogging() string {
 		log.Fatal(err)
 	}
 	log.SetOutput(file)
-	log.Println("tvgo_setup logging started")
+	// log.Println("tvgo_setup logging started")
 	return "tvgo_setup logging started"
 }
 
@@ -460,7 +460,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			TvSI.Title = filename[24:boo]
 			TvSI.Series = "WheelOfTime"
 
-		// /media/pi/PiTB/media/ TVShows/CowboyBebop/s1/Cowboy Bebop S01E01 Glorious Purpose.mp4
+		// /media/pi/PiTB/media/ TVShows/CowboyBebop/s1/Hawkeye S01E01 Glorious Purpose.mp4
 
 		case strings.Contains(apath, "CowboyBebop"):
 			_, filename := path.Split(apath)
@@ -481,6 +481,26 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 			log.Println(filename[14:16])
 			log.Println(filename[17:19])
 			log.Println(filename[19:boo])
+		
+		case strings.Contains(apath, "Hawkeye"):
+			_, filename := path.Split(apath)
+			fspath := apath[21:]
+			boo := len(filename) - 4
+			TvSI.ID = bson.NewObjectId()
+			TvSI.FilePath = apath
+			TvSI.MediaID = tvshowsUUID()
+			TvSI.Genre = "TVShows"
+			TvSI.TVShowPicPath = tvshowpicPath
+			TvSI.TvFSPath = fspath
+			TvSI.Catagory = "Hawkeye"
+			TvSI.Season = filename[14:16]
+			TvSI.Episode = filename[17:19]
+			TvSI.Title = filename[19:boo]
+			TvSI.Series = "Hawkeye"
+			log.Println("Starting Hawkeye")
+			log.Println(filename[9:11])
+			log.Println(filename[13:15])
+			log.Println(filename[15:boo])
 
 	}
 	return

@@ -51,7 +51,7 @@ func ProcessTVShowInfo(pAth string) {
 }
 
 func myDirVisit(pAth string, f os.FileInfo, err error) error {
-	log.Printf("this is path: %s", pAth)
+	// log.Printf("this is path: %s", pAth)
 	if err != nil {
 		fmt.Println(err) // can't walk here,
 		return nil       // but continue walking elsewhere
