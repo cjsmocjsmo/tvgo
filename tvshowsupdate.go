@@ -8,7 +8,7 @@ import (
 	"github.com/globalsign/mgo/bson"
 )
 
-var finished2 bool = false
+// var finished2 bool = false
 
 func scanFileNames() {
 	err := filepath.Walk(os.Getenv("MEDIACENTER_TVSHOWS_PATH"), tvshowUpdateDirVisit)

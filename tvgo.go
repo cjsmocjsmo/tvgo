@@ -3,7 +3,7 @@ package tvgo
 import (
 	"fmt"
 	"github.com/globalsign/mgo"
-	"io"
+	// "io"
 	"log"
 	"os"
 	"path/filepath"
@@ -21,20 +21,20 @@ func TVDBcon() *mgo.Session {
 	return s
 }
 
-func isDirEmpty(name string) (bool, error) {
-	f, err := os.Open(name)
-	if err != nil {
-		return false, err
-	}
-	defer f.Close()
-	// read in ONLY one file
-	_, err = f.Readdir(1)
-	// and if the file is EOF... well, the dir is empty.
-	if err == io.EOF {
-		return true, nil
-	}
-	return false, err
-}
+// func isDirEmpty(name string) (bool, error) {
+// 	f, err := os.Open(name)
+// 	if err != nil {
+// 		return false, err
+// 	}
+// 	defer f.Close()
+// 	// read in ONLY one file
+// 	_, err = f.Readdir(1)
+// 	// and if the file is EOF... well, the dir is empty.
+// 	if err == io.EOF {
+// 		return true, nil
+// 	}
+// 	return false, err
+// }
 
 func ProcessTVShowInfo(pAth string) {
 	log.Println("\n\n Process_TVShows has started")
@@ -47,7 +47,6 @@ func ProcessTVShowInfo(pAth string) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	return
 }
 
 func myDirVisit(pAth string, f os.FileInfo, err error) error {
@@ -80,7 +79,7 @@ func myDirVisit(pAth string, f os.FileInfo, err error) error {
 	return nil
 }
 
-var finished bool = false
+// var finished bool = false
 
 // TVUpdate needs to be exported
 func TVUpdate() (finished bool) {
@@ -98,9 +97,8 @@ func setupLogging() {
 		log.Fatal(err)
 	}
 	log.SetOutput(file)
-	log.Println("Logging started \n")
+	log.Println("Logging started")
 }
-
 
 //TVSetUp is exported to main
 func TVSetUp() (ExStat int) {
@@ -129,6 +127,3 @@ func TVSetUp() (ExStat int) {
 	ExStat = 0
 	return
 }
-
-
-
