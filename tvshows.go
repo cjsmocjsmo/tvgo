@@ -496,7 +496,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println(filename[13:15])
 		log.Println(filename[15:boo])
 
-		// /media/pi/PiTB/media/ TVShows/BookOfBobaFett/s1/the Book Of BobaFett S01E01 Glorious Purpose.mp4
+	// /media/pi/PiTB/media/ TVShows/BookOfBobaFett/s1/the Book Of BobaFett S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "BookOfBobaFett"):
 		_, filename := path.Split(apath)
@@ -514,9 +514,28 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[29:boo]
 		TvSI.Series = "BookOfBobaFett"
 		log.Println("Starting BookOfBobaFett")
-		log.Println(filename[21:23])
-		log.Println(filename[25:27])
-		log.Println(filename[27:boo])
+
+	// /media/pi/PiTB/media/ TVShows/Reacher/s1/Reacher S01E01 Glorious Purpose.mp4
+
+	case strings.Contains(apath, "Reacher"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "Reacher"
+		TvSI.Season = filename[8:10]
+		TvSI.Episode = filename[12:14]
+		TvSI.Title = filename[15:boo]
+		TvSI.Series = "Reacher"
+		log.Println("Starting Reacher")
+		log.Println(filename[8:10])
+		log.Println(filename[12:14])
+		log.Println(filename[15:boo])
 
 	}
 	return
