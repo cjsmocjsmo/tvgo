@@ -515,8 +515,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Series = "BookOfBobaFett"
 		log.Println("Starting BookOfBobaFett")
 
-	// /media/pi/PiTB/media/ TVShows/Reacher/s1/Reacher S01E01 Glorious Purpose.mp4
-
 	case strings.Contains(apath, "Reacher"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
@@ -536,6 +534,48 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println(filename[10:12])
 		log.Println(filename[12:14])
 		log.Println(filename[15:boo])
+
+	case strings.Contains(apath, "Halo"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "Halo"
+		TvSI.Season = filename[6:10]
+		TvSI.Episode = filename[12:14]
+		TvSI.Title = filename[15:boo]
+		TvSI.Series = "Halo"
+		log.Println("Starting Halo")
+		log.Println(filename[6:10])
+		log.Println(filename[12:14])
+		log.Println(filename[15:boo])
+
+		// /media/pi/PiTB/media/ TVShows/MoonKnight/s1/MoonKnight S01E01 Glorious Purpose.mp4
+
+	case strings.Contains(apath, "MoonKnight"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "MoonKnight"
+		TvSI.Season = filename[12:14]
+		TvSI.Episode = filename[16:18]
+		TvSI.Title = filename[19:boo]
+		TvSI.Series = "MoonKnight"
+		log.Println("Starting MoonKnight")
+		log.Println(filename[12:14])
+		log.Println(filename[16:18])
+		log.Println(filename[19:boo])
 
 	}
 	return
