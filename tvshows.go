@@ -546,9 +546,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "Halo"
-		TvSI.Season = filename[6:10]
-		TvSI.Episode = filename[12:14]
-		TvSI.Title = filename[15:boo]
+		TvSI.Season = filename[6:8]
+		TvSI.Episode = filename[10:12]
+		TvSI.Title = filename[13:boo]
 		TvSI.Series = "Halo"
 		log.Println("Starting Halo")
 		log.Println(filename[6:10])
@@ -568,7 +568,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "MoonKnight"
-		TvSI.Season = filename[12:14]
+		TvSI.Season = filename[13:15]
 		TvSI.Episode = filename[16:18]
 		TvSI.Title = filename[19:boo]
 		TvSI.Series = "MoonKnight"
