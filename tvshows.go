@@ -1,6 +1,7 @@
 package tvgo
 
 import (
+	"fmt"
 	"gopkg.in/mgo.v2/bson"
 	"log"
 	"math/rand"
@@ -553,9 +554,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[13:boo]
 		TvSI.Series = "Halo"
 		log.Println("Starting Halo")
-		log.Println(filename[6:10])
-		log.Println(filename[12:14])
-		log.Println(filename[15:boo])
+		// log.Println(filename[6:10])
+		// log.Println(filename[12:14])
+		fmt.Println(filename[13:boo])
 
 		// /media/pi/PiTB/media/ TVShows/MoonKnight/s1/MoonKnight S01E01 Glorious Purpose.mp4
 
@@ -575,9 +576,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[19:boo]
 		TvSI.Series = "MoonKnight"
 		log.Println("Starting MoonKnight")
-		log.Println(filename[12:14])
-		log.Println(filename[16:18])
-		log.Println(filename[19:boo])
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[19:boo])
 
 	}
 	return
