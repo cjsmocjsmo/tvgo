@@ -535,6 +535,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println(filename[12:14])
 		log.Println(filename[15:boo])
 
+		// /media/pi/PiTB/media/ TVShows/MoonKnight/s1/MoonKnight S01E01 Glorious Purpose.mp4
+
 	case strings.Contains(apath, "Halo"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
