@@ -580,6 +580,28 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		// log.Println(filename[16:18])
 		fmt.Println(filename[19:boo])
 
+		// /media/pi/PiTB/media/ TVShows/StrangeNewWorlds/s1/StrangeNewWorlds S01E01 Glorious Purpose.mp4
+
+	case strings.Contains(apath, "StrangeNewWorlds"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "StrangeNewWorlds"
+		TvSI.Season = filename[17:19]
+		TvSI.Episode = filename[21:23]
+		TvSI.Title = filename[23:boo]
+		TvSI.Series = "StrangeNewWorlds"
+		log.Println("Starting StrangeNewWorlds")
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[23:boo])
+
 	}
 	return
 }
