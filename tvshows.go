@@ -593,8 +593,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "StrangeNewWorlds"
-		TvSI.Season = filename[28:30]
-		TvSI.Episode = filename[32:34]
+		TvSI.Season = filename[30:32]
+		TvSI.Episode = filename[34:36]
 		TvSI.Title = filename[36:boo]
 		TvSI.Series = "StrangeNewWorlds"
 		log.Println("Starting StrangeNewWorlds")
