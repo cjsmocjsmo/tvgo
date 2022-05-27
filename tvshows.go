@@ -2,7 +2,6 @@ package tvgo
 
 import (
 	"fmt"
-	"gopkg.in/mgo.v2/bson"
 	"log"
 	"math/rand"
 	"os"
@@ -10,6 +9,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+
+	"gopkg.in/mgo.v2/bson"
 )
 
 func tvshowsUUID() (UUID string) {
@@ -602,6 +603,51 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		// log.Println(filename[16:18])
 		fmt.Println(filename[24:boo])
 
+		// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/prehistoricplanet S01E01 Glorious Purpose.mp4
+
+	case strings.Contains(apath, "PrehistoricPlanet"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "PrehistoricPlanet"
+		TvSI.Season = filename[19:21]
+		TvSI.Episode = filename[22:24]
+		TvSI.Title = filename[24:boo]
+		TvSI.Series = "PrehistoricPlanet"
+		log.Println("Starting PrehistoricPlanet")
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[24:boo])
+
+		// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Obi-wan kenobi S01E01 Glorious Purpose.mp4
+
+	case strings.Contains(apath, "ObiWanKenobi"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "ObiWanKenobi"
+		TvSI.Season = filename[16:18]
+		TvSI.Episode = filename[19:21]
+		TvSI.Title = filename[21:boo]
+		TvSI.Series = "ObiWanKenobi"
+		log.Println("Starting ObiWanKenobi")
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[24:boo])
+
 	}
+
 	return
 }
