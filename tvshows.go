@@ -616,9 +616,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "PrehistoricPlanet"
-		TvSI.Season = filename[19:21]
-		TvSI.Episode = filename[22:24]
-		TvSI.Title = filename[24:boo]
+		TvSI.Season = filename[24:26]
+		TvSI.Episode = filename[28:30]
+		TvSI.Title = filename[30:boo]
 		TvSI.Series = "PrehistoricPlanet"
 		log.Println("Starting PrehistoricPlanet")
 		// log.Println(filename[12:14])
