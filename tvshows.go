@@ -647,6 +647,28 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		// log.Println(filename[16:18])
 		fmt.Println(filename[24:boo])
 
+		// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Ms Marvel S01E01 Glorious Purpose.mp4
+
+	case strings.Contains(apath, "MSMarvel"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "MSMarvel"
+		TvSI.Season = filename[10:12]
+		TvSI.Episode = filename[14:16]
+		TvSI.Title = filename[16:boo]
+		TvSI.Series = "MSMarvel"
+		log.Println("Starting MSMarvel")
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[16:boo])
+
 	}
 
 	return
