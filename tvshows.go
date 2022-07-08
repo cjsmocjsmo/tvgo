@@ -660,7 +660,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "MSMarvel"
-		TvSI.Season = filename[10:12]
+		TvSI.Season = filename[11:13]
 		TvSI.Episode = filename[14:16]
 		TvSI.Title = filename[16:boo]
 		TvSI.Series = "MSMarvel"
