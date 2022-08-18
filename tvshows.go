@@ -669,6 +669,50 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		// log.Println(filename[16:18])
 		fmt.Println(filename[16:boo])
 
+	
+	// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/IAmGroot S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "IAmGroot"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "IAmGroot"
+		TvSI.Season = filename[9:11]
+		TvSI.Episode = filename[12:14]
+		TvSI.Title = filename[14:boo]
+		TvSI.Series = "IAmGroot"
+		log.Println("Starting IAmGroot")
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[14:boo])
+
+
+	// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/shehulk S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "SheHulk"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "SheHulk"
+		TvSI.Season = filename[8:10]
+		TvSI.Episode = filename[11:13]
+		TvSI.Title = filename[13:boo]
+		TvSI.Series = "SheHulk"
+		log.Println("Starting SheHulk")
+		// log.Println(filename[12:14])
+		// log.Println(filename[16:18])
+		fmt.Println(filename[13:boo])
+
 	}
 
 	return
