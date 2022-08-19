@@ -692,7 +692,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		fmt.Println(filename[17:boo])
 
 
-	// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/shehulk attorney at law S01E01 Glorious Purpose.mp4
+	
 	case strings.Contains(apath, "SheHulk"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
