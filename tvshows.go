@@ -704,8 +704,8 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "SheHulk"
-		TvSI.Season = filename[26:28]
-		TvSI.Episode = filename[29:31]
+		TvSI.Season = filename[25:27]
+		TvSI.Episode = filename[28:30]
 		TvSI.Title = filename[31:boo]
 		TvSI.Series = "SheHulk"
 		log.Println("Starting SheHulk")
