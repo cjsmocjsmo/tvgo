@@ -551,13 +551,13 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "Halo"
 		TvSI.Season = filename[6:8]
-		TvSI.Episode = filename[10:12]
-		TvSI.Title = filename[13:boo]
+		TvSI.Episode = filename[9:11]
+		TvSI.Title = filename[12:boo]
 		TvSI.Series = "Halo"
 		log.Println("Starting Halo")
 		// log.Println(filename[6:10])
 		// log.Println(filename[12:14])
-		fmt.Println(filename[13:boo])
+		fmt.Println(filename[12:boo])
 
 		// /media/pi/PiTB/media/ TVShows/MoonKnight/s1/MoonKnight S01E01 Glorious Purpose.mp4
 
@@ -704,9 +704,9 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "SheHulk"
-		TvSI.Season = filename[25:27]
-		TvSI.Episode = filename[29:31]
-		TvSI.Title = filename[31:boo]
+		TvSI.Season = filename[27:29]
+		TvSI.Episode = filename[30:32]
+		TvSI.Title = filename[32:boo]
 		TvSI.Series = "SheHulk"
 		log.Println("Starting SheHulk")
 		// log.Println(filename[12:14])
