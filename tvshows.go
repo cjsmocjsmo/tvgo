@@ -357,8 +357,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[30:boo]
 		TvSI.Series = "TheBadBatch"
 
-		// /media/pi/PiTB/TVShows/Loki/s1/Loki S01E01 Glorious Purpose.mp4
-
 	case strings.Contains(apath, "WhatIf"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
@@ -375,7 +373,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[14:boo]
 		TvSI.Series = "WhatIf"
 
-		// /media/pi/PiTB/media/ TVShows/YTheLastMan/s1/ Y The Last Man S01E01 Glorious Purpose.mp4
 	case strings.Contains(apath, "YTheLastMan"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
@@ -391,8 +388,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Episode = filename[19:21]
 		TvSI.Title = filename[21:boo]
 		TvSI.Series = "YTheLastMan"
-
-	// /media/pi/PiTB/media/ TVShows/Foundation/s1/Foundation S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "Foundation"):
 		_, filename := path.Split(apath)
@@ -498,8 +493,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println(filename[13:15])
 		log.Println(filename[15:boo])
 
-	// /media/pi/PiTB/media/ TVShows/BookOfBobaFett/s1/the Book Of BobaFett S01E01 Glorious Purpose.mp4
-
 	case strings.Contains(apath, "BookOfBobaFett"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
@@ -537,8 +530,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println(filename[12:14])
 		log.Println(filename[15:boo])
 
-		// /media/pi/PiTB/media/ TVShows/MoonKnight/s1/MoonKnight S01E01 Glorious Purpose.mp4
-
 	case strings.Contains(apath, "Halo"):
 		_, filename := path.Split(apath)
 		fspath := apath[21:]
@@ -555,11 +546,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[12:boo]
 		TvSI.Series = "Halo"
 		log.Println("Starting Halo")
-		// log.Println(filename[6:10])
-		// log.Println(filename[12:14])
 		fmt.Println(filename[12:boo])
-
-		// /media/pi/PiTB/media/ TVShows/MoonKnight/s1/MoonKnight S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "MoonKnight"):
 		_, filename := path.Split(apath)
@@ -577,11 +564,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[19:boo]
 		TvSI.Series = "MoonKnight"
 		log.Println("Starting MoonKnight")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
 		fmt.Println(filename[19:boo])
-
-		// /media/pi/PiTB/media/ TVShows/StrangeNewWorlds/s1/StrangeNewWorlds S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "StrangeNewWorlds"):
 		_, filename := path.Split(apath)
@@ -599,11 +582,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[36:boo]
 		TvSI.Series = "StrangeNewWorlds"
 		log.Println("Starting StrangeNewWorlds")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
 		fmt.Println(filename[24:boo])
-
-		// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/prehistoricplanet S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "PrehistoricPlanet"):
 		_, filename := path.Split(apath)
@@ -621,11 +600,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[30:boo]
 		TvSI.Series = "PrehistoricPlanet"
 		log.Println("Starting PrehistoricPlanet")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
 		fmt.Println(filename[24:boo])
-
-		// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Obi-wan kenobi S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "ObiWanKenobi"):
 		_, filename := path.Split(apath)
@@ -643,11 +618,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[21:boo]
 		TvSI.Series = "ObiWanKenobi"
 		log.Println("Starting ObiWanKenobi")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
 		fmt.Println(filename[24:boo])
-
-		// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Ms Marvel S01E01 Glorious Purpose.mp4
 
 	case strings.Contains(apath, "MSMarvel"):
 		_, filename := path.Split(apath)
@@ -665,8 +636,6 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[16:boo]
 		TvSI.Series = "MSMarvel"
 		log.Println("Starting MSMarvel")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
 		fmt.Println(filename[16:boo])
 
 	
@@ -687,11 +656,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[17:boo]
 		TvSI.Series = "IAmGroot"
 		log.Println("Starting IAmGroot")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
 		fmt.Println(filename[17:boo])
-
-
 	
 	case strings.Contains(apath, "SheHulk"):
 		_, filename := path.Split(apath)
@@ -709,8 +674,45 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.Title = filename[31:boo]
 		TvSI.Series = "SheHulk"
 		log.Println("Starting SheHulk")
-		// log.Println(filename[12:14])
-		// log.Println(filename[16:18])
+		fmt.Println(filename[31:boo])
+
+
+// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/House Of The Dragon S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "HouseOfTheDragon"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "HouseOfTheDragon"
+		TvSI.Season = filename[20:22]
+		TvSI.Episode = filename[23:25]
+		TvSI.Title = filename[25:boo]
+		TvSI.Series = "HouseOfTheDragon"
+		log.Println("Starting HouseOfTheDragon")
+		fmt.Println(filename[25:boo])
+
+// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/The Lord Of The Rings The Rings Of Power S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "TheLordOfTheRingsTheRingsOfPower"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "TheLordOfTheRingsTheRingsOfPower"
+		TvSI.Season = filename[41:43]
+		TvSI.Episode = filename[44:46]
+		TvSI.Title = filename[46:boo]
+		TvSI.Series = "TheLordOfTheRingsTheRingsOfPower"
+		log.Println("Starting TheLordOfTheRingsTheRingsOfPower")
 		fmt.Println(filename[31:boo])
 
 	}
