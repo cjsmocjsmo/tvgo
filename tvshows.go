@@ -689,12 +689,12 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "HouseOfTheDragon"
-		TvSI.Season = filename[20:22]
-		TvSI.Episode = filename[23:25]
-		TvSI.Title = filename[25:boo]
+		TvSI.Season = filename[21:23]
+		TvSI.Episode = filename[24:26]
+		TvSI.Title = filename[26:boo]
 		TvSI.Series = "HouseOfTheDragon"
 		log.Println("Starting HouseOfTheDragon")
-		fmt.Println(filename[25:boo])
+		fmt.Println(filename[26:boo])
 
 // /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/The Lord Of The Rings The Rings Of Power S01E01 Glorious Purpose.mp4
 	case strings.Contains(apath, "TheLordOfTheRingsTheRingsOfPower"):
@@ -708,12 +708,12 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "TheLordOfTheRingsTheRingsOfPower"
-		TvSI.Season = filename[41:43]
-		TvSI.Episode = filename[44:46]
-		TvSI.Title = filename[46:boo]
+		TvSI.Season = filename[42:44]
+		TvSI.Episode = filename[45:47]
+		TvSI.Title = filename[47:boo]
 		TvSI.Series = "TheLordOfTheRingsTheRingsOfPower"
 		log.Println("Starting TheLordOfTheRingsTheRingsOfPower")
-		fmt.Println(filename[31:boo])
+		fmt.Println(filename[47:boo])
 
 	}
 
