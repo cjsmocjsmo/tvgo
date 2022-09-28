@@ -715,6 +715,25 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println("Starting TheLordOfTheRingsTheRingsOfPower")
 		fmt.Println(filename[47:boo])
 
+// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Andor S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "Andor"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "Andor"
+		TvSI.Season = filename[7:9]
+		TvSI.Episode = filename[11:13]
+		TvSI.Title = filename[13:boo]
+		TvSI.Series = "Andor"
+		log.Println("Starting Andor")
+		fmt.Println(filename[13:boo])
+
 	}
 
 	return
