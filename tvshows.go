@@ -747,7 +747,7 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "NightSky"
 		TvSI.Season = filename[11:13]
-		TvSI.Episode = filename[15:17]
+		TvSI.Episode = filename[14:16]
 		TvSI.Title = filename[17:boo]
 		TvSI.Series = "NightSky"
 		log.Println("Starting NightSky")
