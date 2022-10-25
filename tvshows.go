@@ -734,6 +734,26 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println("Starting Andor")
 		fmt.Println(filename[13:boo])
 
+	// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Night Sky S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "NightSky"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "NightSky"
+		TvSI.Season = filename[11:13]
+		TvSI.Episode = filename[15:17]
+		TvSI.Title = filename[17:boo]
+		TvSI.Series = "NightSky"
+		log.Println("Starting NightSky")
+		fmt.Println(filename[17:boo])
+
+
 	}
 
 	return
