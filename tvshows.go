@@ -765,12 +765,12 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		TvSI.TVShowPicPath = tvshowpicPath
 		TvSI.TvFSPath = fspath
 		TvSI.Catagory = "TalesOfTheJedi"
-		TvSI.Season = filename[30:32]
-		TvSI.Episode = filename[33:35]
-		TvSI.Title = filename[35:boo]
+		TvSI.Season = filename[29:31]
+		TvSI.Episode = filename[32:34]
+		TvSI.Title = filename[34:boo]
 		TvSI.Series = "TalesOfTheJedi"
 		log.Println("Starting TalesOfTheJedi")
-		fmt.Println(filename[35:boo])
+		fmt.Println(filename[34:boo])
 	}
 
 	return
