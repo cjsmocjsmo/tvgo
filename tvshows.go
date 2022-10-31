@@ -753,7 +753,24 @@ func getTvShowInfo(apath string, tvshowpicPath string) (TvSI TVShowInfoS) {
 		log.Println("Starting NightSky")
 		fmt.Println(filename[17:boo])
 
-
+	// /media/pi/PiTB/media/ TVShows/prehistoricplanet/s1/Star Wars Tales Of The Jedi S01E01 Glorious Purpose.mp4
+	case strings.Contains(apath, "TalesOfTheJedi"):
+		_, filename := path.Split(apath)
+		fspath := apath[21:]
+		boo := len(filename) - 4
+		TvSI.ID = bson.NewObjectId()
+		TvSI.FilePath = apath
+		TvSI.MediaID = tvshowsUUID()
+		TvSI.Genre = "TVShows"
+		TvSI.TVShowPicPath = tvshowpicPath
+		TvSI.TvFSPath = fspath
+		TvSI.Catagory = "TalesOfTheJedi"
+		TvSI.Season = filename[30:32]
+		TvSI.Episode = filename[33:35]
+		TvSI.Title = filename[35:boo]
+		TvSI.Series = "TalesOfTheJedi"
+		log.Println("Starting TalesOfTheJedi")
+		fmt.Println(filename[35:boo])
 	}
 
 	return
